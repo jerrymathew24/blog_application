@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 <div class = 'container' >
+<%= link_to "Create New", new_post_path , class:'btn btn-primary m-2' %>
 
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= link_to "Show this blog", post , class:'btn btn-secondary m-2' %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
 </div>

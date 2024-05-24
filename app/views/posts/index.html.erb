@@ -3,7 +3,8 @@
 <%= link_to "Create New", new_post_path , class:'btn btn-primary m-2' %>
 
 <div id="posts">
-  <% @posts.each do |post| %>
+    <% @posts.each do |p| %>
+    <% post = PostPresenter.new(p) %>
     <%= render post %>
     <p>
       <%= link_to "Show this blog", post , class:'btn btn-secondary m-2' %>
